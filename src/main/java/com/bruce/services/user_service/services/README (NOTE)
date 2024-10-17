@@ -1,0 +1,33 @@
+/*** NOTES ***/
+------------------
+
+Abstract
+- Declare `abstract` if the extended class only consist one of the method of the abstract class.
+- Declared as normal concrete class `public class xxx` if the extended class include all methods of the abstract class.
+
+Interface
+- Declare `abstract` if the implemented class only consist one of the method of the interface class.
+- Declared as normal concrete class `public class xxx` if the implemented class include all methods of the interface.
+
+Static
+- Cannot extract value use with dependency injection (@Value).
+  -- Need to use @PostConstruct
+  -- ConfigurableApplicationContext context = SpringApplication.run(CustomerSupportServiceApplication.class, args);
+     CustomerSupportServiceApplication app = context.getBean(CustomerSupportServiceApplication.class);
+     app.your_value
+
+Database
+- LIMIT - how many records
+- Offset - from which number of record start returning. E.g. 10 then record return will be from 11
+
+Annotation/Dependency Injection
+- Class need be declared using any (e.g. @Component) to allow @Autowired
+- @PathVariable - xxx/xxx/abc-asd-sad
+- @RequestParam - xxx/xxx?a=abc&b=def
+- @RequestBody - {xxx: xxx, ...}
+
+Throw exception in method signature
+- if not using try catch
+
+Throw exceotion in try catch
+- no need include in method signature
