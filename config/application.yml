@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: user-service
+  main:
+    allow-bean-definition-overriding: true
+
+management:
+  server:
+    port: 8081

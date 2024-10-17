@@ -1,0 +1,60 @@
+-- Method 1
+CREATE TABLE user_service.user
+(
+    id uuid  NOT NULL,
+    name varchar(255) NOT NULL,
+    email varchar(36) NOT NULL,
+    age integer NULL,
+    address varchar(255) NULL,
+    comment text NULL
+    created_at timestamp NULL,
+    created_by varchar(255) NULL,
+    updated_at timestamp NULL,
+    updated_by varchar(255) NULL,
+    CONSTRAINT user_pkey PRIMARY KEY (id),
+    CONSTRAINT idx_email UNIQUE (email)
+);
+
+
+-- Method 2
+CREATE TABLE user_service.user
+(
+    id uuid  NOT NULL,
+    name varchar(255) NOT NULL,
+    email varchar(36) NOT NULL,
+    age integer NULL,
+    address text NULL,
+    created_at timestamp NULL,
+    created_by varchar(255) NULL,
+    updated_at timestamp NULL,
+    updated_by varchar(255) NULL,
+    CONSTRAINT user_pkey PRIMARY KEY (id)
+);
+CREATE INDEX idx_user_name ON user (user_name);
+ALTER INDEX idx_user_name RENAME TO idx_uname
+
+
+-- Method 3
+CREATE TABLE user_service.user
+(
+    id uuid NOT NULL PRIMARY KEY,
+    email varchar(255) NOT NULL UNIQUE,
+    age integer CHECK (age >= 0),
+    created_at timestamp DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- Method 4 **
+CREATE TABLE user_service.user
+(
+    id uuid NOT NULL UNIQUE PRIMARY KEY,
+    name varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+    age integer NULL,
+    address text NULL,
+    created_at timestamp NULL,
+    created_by varchar(255) NULL,
+    updated_at timestamp NULL,
+    updated_by varchar(255) NULL,
+    constraint idx_email UNIQUE (email)
+);
