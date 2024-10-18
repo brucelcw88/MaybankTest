@@ -1,15 +1,12 @@
 package com.bruce.services.user_service.controller;
 
-import com.bruce.services.user_service.dao.User;
 import com.bruce.services.user_service.dto.UserDto;
 import com.bruce.services.user_service.dto.UserResponseDto;
-import com.bruce.services.user_service.exception.UserNotFoundException;
 import com.bruce.services.user_service.logging.ApiLogger;
 import com.bruce.services.user_service.services.impl.UserServiceImpl;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.UUID;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

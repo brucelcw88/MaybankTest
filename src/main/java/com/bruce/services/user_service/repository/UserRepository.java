@@ -11,18 +11,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
-
-
-
-
-
-
-
-
-
-
-
-
     List<User> findAll();
     Page<User> findAll(Pageable pageable);
     Optional<User> findById(UUID id);
