@@ -1,5 +1,5 @@
 # Steps to Prep
-1. Restore DB 
+1. Restore DB - Run the `maybank_test_user_service.sql`
 2. Import `USER_CRUD.postman_collection.json` for postman testing
 3. Run Java Springboot services
 

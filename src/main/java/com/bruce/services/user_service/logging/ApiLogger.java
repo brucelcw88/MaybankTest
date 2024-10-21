@@ -45,7 +45,7 @@ public class ApiLogger {
 
             System.out.println("connection = " + connection);
 
-            // Send request body if it's a POST request
+            // Send request body if it's a PUT || POST request
             if ((Arrays.asList("PUT", "POST").contains(method)) && requestBody != null) {
                 try (OutputStream os = connection.getOutputStream()) {
                     os.write(requestBody.getBytes());
